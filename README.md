@@ -28,7 +28,7 @@
 
 ---
 
-## ✨ Live Demo
+## ✨ Demo
 
 <div align="center">
 
@@ -68,7 +68,7 @@ $ pulse api.github.com
 
 ---
 
-## 🎯 Why pulse? The Game Changer
+## 🎯 Why pulse?
 
 <div align="center">
 
@@ -137,7 +137,7 @@ $ pulse api.github.com
 
 ---
 
-## 📦 Installation Methods
+## 📦 Installation
 
 <div align="center">
 
@@ -172,7 +172,7 @@ python pulse.py api.github.com
 
 ---
 
-## ⚡ Quick Start Guide
+## ⚡ Quick Start
 
 <div align="center">
 
@@ -212,7 +212,7 @@ pulse api.example.com --timeout 30
 
 ---
 
-## 💡 Usage Examples
+## 💡 Examples
 
 ### 🕶️ **Human-Friendly Output (Default)**
 
@@ -299,7 +299,7 @@ fi
 
 ---
 
-## ⚙️ CLI Reference Guide
+## ⚙️ CLI Reference
 
 <div align="center">
 
@@ -334,7 +334,7 @@ optional arguments:
 
 ---
 
-## 🤖 Automation & Integration
+## 🤖 Automation
 
 <div align="center">
 
@@ -415,7 +415,7 @@ done
 
 ---
 
-## 🛠️ Troubleshooting Guide
+## 🛠️ Troubleshooting
 
 <div align="center">
 
@@ -448,7 +448,7 @@ curl -I https://your-domain.com/
 
 ---
 
-## 👥 Contributing Guidelines
+## 👥 Contributing
 
 <div align="center">
 
