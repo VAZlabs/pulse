@@ -1,39 +1,40 @@
-<!--
-  README.md — polished project landing
-  - Clear header and badges
-  - Table of contents for easy navigation
-  - Highlighted quick start and beautiful output examples
-  - CLI reference, JSON usage, automation tips and troubleshooting
--->
+# 🌟 pulse — Network Diagnostics in 3 Seconds
 
-# pulse — Network Diagnostics in 3 Seconds
+<div align="center">
 
-![Release](https://img.shields.io/badge/release-1.0.0-blue.svg)
-![Python](https://img.shields.io/badge/python-3.8%2B-brightgreen.svg)
-![License](https://img.shields.io/badge/license-GPL--3.0-red.svg)
+[![Release](https://img.shields.io/badge/release-1.0.0-blue.svg?style=for-the-badge&logo=github)](https://github.com/VAZlabs/pulse/releases)
+[![Python](https://img.shields.io/badge/python-3.8%2B-green.svg?style=for-the-badge&logo=python)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-GPL--3.0-red.svg?style=for-the-badge&logo=gnu)](https://github.com/VAZlabs/pulse/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/vazor-code/pulse?style=for-the-badge&logo=github)](https://github.com/VAZlabs/pulse/stargazers)
 
-> A tiny, dependency-free CLI that checks the full networking chain — DNS → TCP → TLS → HTTP — and presents actionable, beautifully formatted results for humans and machines.
+</div>
 
----
+<div align="center">
 
-## Table of Contents
+### 🚀 **The Ultimate Network Diagnostic Tool**
+**DNS → TCP → TLS → HTTP** • **Dependency-Free** • **Beautiful Output** • **Machine-Friendly**
 
-- [Demo](#demo)
-- [Why pulse?](#why-pulse)
-- [Install](#install)
-- [Quick Start](#quick-start)
-- [Examples](#examples)
-- [CLI Reference](#cli-reference)
-- [JSON / Automation](#json--automation)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
+</div>
 
 ---
 
-## Demo
+## 📚 Navigation Menu
 
-Run `pulse` and enjoy an instantly readable report with colors, icons and advice.
+<div align="center">
+
+[✨ Demo](#-demo) • [🎯 Why pulse?](#-why-pulse) • [📦 Installation](#-installation) • [⚡ Quick Start](#-quick-start) • [💡 Examples](#-examples) • [⚙️ CLI Reference](#️-cli-reference) • [🤖 Automation](#-automation) • [🛠️ Troubleshooting](#️-troubleshooting) • [👥 Contributing](#-contributing) • [📄 License](#-license)
+
+</div>
+
+---
+
+## ✨ Live Demo
+
+<div align="center">
+
+### Experience the Magic in Real-Time
+
+</div>
 
 ```bash
 $ pulse api.github.com
@@ -59,475 +60,476 @@ $ pulse api.github.com
 ╚════════════════════════════════════════════════╝
 ```
 
-This output is intentionally compact and color-coded so you can scan for issues at a glance.
+<div align="center">
+
+**🎯 Instantly identify network bottlenecks with beautiful, color-coded results**
+
+</div>
 
 ---
 
-## Why pulse?
+## 🎯 Why pulse? The Game Changer
 
-Pulse fills the gap between low-level tools and human-friendly insight.
+<div align="center">
 
-- Single command that replaces a pipeline of `dig`/`nc`/`openssl`/`curl` calls
-- Fast: completes within a few hundred milliseconds on typical networks
-- Zero runtime dependencies — pure Python stdlib
-- Machine-friendly JSON + meaningful exit codes for automation
+### Comparison Matrix: Traditional vs Modern Approach
+
+</div>
+
+<table align="center">
+  <tr>
+    <th width="200">Feature</th>
+    <th width="200">Traditional Tools</th>
+    <th width="200">pulse</th>
+  </tr>
+  <tr>
+    <td><strong>All-in-one</strong></td>
+    <td>❌ (dig, nc, openssl, curl)</td>
+    <td>✅ Single command</td>
+  </tr>
+  <tr>
+    <td><strong>Speed</strong></td>
+    <td>❌ Slow</td>
+    <td>✅ 3 seconds</td>
+  </tr>
+  <tr>
+    <td><strong>No Dependencies</strong></td>
+    <td>❌ Multiple packages</td>
+    <td>✅ Stdlib only</td>
+  </tr>
+  <tr>
+    <td><strong>Actionable Output</strong></td>
+    <td>❌ Raw output</td>
+    <td>✅ Clear insights</td>
+  </tr>
+  <tr>
+    <td><strong>Automation</strong></td>
+    <td>⚠️ Complex parsing</td>
+    <td>✅ JSON + exit codes</td>
+  </tr>
+  <tr>
+    <td><strong>Visual Feedback</strong></td>
+    <td>❌ Text-only</td>
+    <td>✅ Beautiful formatting</td>
+  </tr>
+  <tr>
+    <td><strong>Cross-Platform</strong></td>
+    <td>❌ Platform-specific</td>
+    <td>✅ Universal compatibility</td>
+  </tr>
+</table>
+
+<br>
+
+<div align="center">
+
+### 🌟 Key Advantages
+
+</div>
+
+- 🔧 **Complete Network Chain**: Checks DNS → TCP → TLS → HTTP in one go
+- ⚡ **Blazing Fast**: Optimized for speed without sacrificing accuracy
+- 🧼 **Zero Dependencies**: Pure Python standard library - works everywhere
+- 🎨 **Beautiful Output**: Color-coded, icon-enhanced results for humans
+- 🤖 **Machine Ready**: JSON output with proper exit codes for automation
+- 📊 **Detailed Insights**: Per-step timing and detailed failure information
+- 🌐 **Universal**: Works on any system with Python 3.8+
 
 ---
 
-## Install
+## 📦 Installation Methods
 
-Pick how you want to use it:
+<div align="center">
 
-- Quick (no install):
+### Choose Your Weapon
 
-```bash
-python pulse.py <target>
-```
+</div>
 
-- Global install (recommended for convenience):
-
-```powershell
-pip install .
-pulse api.github.com
-```
-
-- Development mode:
+#### 🏃‍♂️ **Quick Start (No Install)**
 
 ```bash
+# Direct execution from source
+python pulse.py api.github.com
+```
+
+#### 🧪 **Development Mode**
+
+```bash
+# Clone and install in development mode
+git clone https://github.com/VAZlabs/pulse
+cd pulse
 pip install -e .
 pip install -r requirements-dev.txt
 ```
 
----
-
-## Quick Start
-
-Basic check (defaults to HTTPS / port 443):
+#### 🐍 **From Source**
 
 ```bash
-pulse api.github.com
-```
-
-Deep analysis (enable extra TLS checks):
-
-```bash
-pulse api.example.com --deep
-```
-
-Get machine-readable output:
-
-```bash
-pulse api.github.com --json
-```
-
-Adjust per-check timeout (seconds):
-
-```bash
-pulse api.example.com --timeout 30
-```
-
----
-
-## Examples
-
-### Fast (human) output
-
-See demo above — the human output shows each step with timing and a friendly status.
-
-### Deep analysis (detect slow TLS)
-
-```bash
-pulse api.example.com --deep
-
-┌──────────────────────────────────────────────────┐
-│ Results                                          │
-└──────────────────────────────────────────────────┘
-
-  ▸ ⚠️  TLS         287 ms  »  TLSv1.2 • ECDHE-RSA-AES256 (SLOW)
-
-⚡ Performance Issues Detected — advice provided below.
-```
-
-### JSON output (for automation)
-
-```json
-{
-  "target": "api.github.com:443",
-  "checks": [
-    {"name":"DNS","duration_ms":67.3,"status":"✓","details":"→ 140.82.121.6"},
-    {"name":"TCP","duration_ms":52.1,"status":"✓","details":"→ SYN → SYN-ACK → ACK"},
-    {"name":"TLS","duration_ms":252.4,"status":"✓","details":"→ TLSv1.3 • TLS_AES_256_GCM_SHA384"},
-    {"name":"HTTP","duration_ms":341.2,"status":"✓","details":"→ GET /health → 200"}
-  ],
-  "total_ms":712.0,
-  "healthy":true
-}
-```
-
----
-
-## CLI Reference
-
-```
-usage: pulse [-h] [--deep] [--json] [--timeout TIMEOUT] target
-
-positional arguments:
-  target               Host[:port] or URL to check (e.g. api.github.com)
-
-optional arguments:
-  -h, --help           show this help message and exit
-  --deep               enable deep analysis (TLS anomaly detection)
-  --json               output JSON for scripting
-  --timeout TIMEOUT    timeout for individual checks in seconds (default: 10)
-```
-
-Exit codes:
-
-- `0` — healthy (all checks passed)
-- `1` — degraded (warnings present)
-- `2` — failed (critical error)
-
----
-
-## JSON & Automation
-
-Pulse produces compact JSON suitable for pipelines and monitoring. Use the `--json` flag and parse fields such as `total_ms`, `healthy` and individual check durations.
-
-Example: send results to Prometheus Pushgateway (conceptual):
-
-```python
-import json, subprocess
-res = subprocess.run(["pulse","api.github.com","--json"], capture_output=True, text=True)
-data = json.loads(res.stdout)
-print(data['total_ms'], data['healthy'])
-```
-
----
-
-## Troubleshooting & Quick Fixes
-
-If a check fails, pulse prints concise, actionable suggestions. Common cases:
-
-- DNS: try public DNS (`nslookup <host> 8.8.8.8`) or verify `/etc/resolv.conf`.
-- TCP: ensure service listens on port and firewall allows traffic.
-- TLS: check certificate chain and enable TLS1.3 / modern ciphers.
-- HTTP: verify application endpoint (maybe not `/health`).
-
-If you need more detail, run the specific diagnostic commands suggested by the output (e.g. `openssl s_client -connect host:443`).
-
----
-
-## Contributing
-
-Contributions welcome — see `CONTRIBUTING.md` for the workflow, testing and code style. Keep commits focused, include tests for new behavior and follow the conventional commit types: `feat`, `fix`, `docs`, `chore`, etc.
-
----
-
-## Release & changelog
-
-We tag releases and publish to PyPI. Bump `version` in `setup.py` and update `CHANGELOG.md` when preparing a release.
-
----
-
-## License
-
-This project is released under the **GPL-3.0** license — see `LICENSE` for details.
-
----
-
-If you'd like, I can now commit this change (suggested commit message: `docs: Polish README with rich examples and TOC`).
-# pulse — Network Diagnostics in 3 Seconds
-
-Check DNS → TCP → TLS → HTTP chain with actionable insights. **No dependencies. Works on bare servers.**
-
-```bash
-$ pulse api.github.com
-
-╔════════════════════════════════════════════════╗
-║  🔍 pulse — Network Diagnostics            ║
-╚════════════════════════════════════════════════╝
-
-  Target:  api.github.com
-  Mode:    Fast Check
-
-┌──────────────────────────────────────────────────┐
-│ Results                                     │
-└──────────────────────────────────────────────────┘
-
-  ▸ ✓  DNS          12 ms  »  → 140.82.121.6
-  ▸ ✓  TCP          51 ms  »  → SYN → SYN-ACK → ACK
-  ▸ ✓  TLS         240 ms  »  → TLSv1.3 • TLS_AES_128_GCM_SHA256
-  ▸ ✓  HTTP        242 ms  »  → GET /health → 200
-
-╔════════════════════════════════════════════════╗
-║  ✨ All Systems Healthy ✨                 ║
-║  Total time: 544 ms                      ║
-╚════════════════════════════════════════════════╝
-```
-
-## Why pulse?
-
-| Feature | Traditional tools | pulse |
-|---------|-------------------|-------|
-| All-in-one | ❌ (dig, nc, openssl, curl) | ✅ Single command |
-| Speed | ❌ Slow | ✅ 3 seconds |
-| No deps | ❌ Multiple packages | ✅ Stdlib only |
-| Actionable | ❌ Raw output | ✅ Clear insights |
-| Automation | ⚠️ Complex parsing | ✅ JSON + exit codes |
-
-## Quick Start
-
-### Installation
-
-```bash
-# Global installation
-pip install pulse-network-diagnostics
-pulse api.github.com
-
-# Or use directly (no install)
-python pulse.py api.github.com
-
-# Or with git clone
-git clone https://github.com/vazor-code/pulse
-cd pulse
+# Download and run directly
+wget https://raw.githubusercontent.com/vazor-code/pulse/main/pulse.py
 python pulse.py api.github.com
 ```
 
-### One-Second Quickstart
+---
+
+## ⚡ Quick Start Guide
+
+<div align="center">
+
+### Get Started in Seconds
+
+</div>
+
+#### 🎯 **One-Command Setup**
 
 ```bash
 $ pulse api.github.com
 # ✨ Beautiful output with timing and status
-# Exit code: 0 (healthy) or 1 (degraded) or 2 (failed)
+# Exit code: 0 (healthy) | 1 (degraded) | 2 (failed)
 ```
 
-## Features
-
-<!--
-  README.md — polished project landing
-  - Clear header and badges
-  - Table of contents for easy navigation
-  - Highlighted quick start and beautiful output examples
-  - CLI reference, JSON usage, automation tips and troubleshooting
--->
-
-# pulse — Network Diagnostics in 3 Seconds
-
-![Release](https://img.shields.io/badge/release-1.0.0-blue.svg)
-![Python](https://img.shields.io/badge/python-3.8%2B-brightgreen.svg)
-![License](https://img.shields.io/badge/license-GPL--3.0-red.svg)
-
-> A tiny, dependency-free CLI that checks the full networking chain — DNS → TCP → TLS → HTTP — and presents actionable, beautifully formatted results for humans and machines.
-
----
-
-## Table of Contents
-
-- [Demo](#demo)
-- [Why pulse?](#why-pulse)
-- [Install](#install)
-- [Quick Start](#quick-start)
-- [Examples](#examples)
-- [CLI Reference](#cli-reference)
-- [JSON / Automation](#json--automation)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
-## Demo
-
-Run `pulse` and enjoy an instantly readable report with colors, icons and advice.
+#### 🔍 **Basic Usage Examples**
 
 ```bash
-$ pulse api.github.com
-
-╔════════════════════════════════════════════════╗
-║  🔍 pulse — Network Diagnostics                ║
-╚════════════════════════════════════════════════╝
-
-  Target:  api.github.com
-
-┌──────────────────────────────────────────────────┐
-│ Results                                          │
-└──────────────────────────────────────────────────┘
-
-  ▸ ✓  DNS          12 ms  »  → 140.82.121.6
-  ▸ ✓  TCP          51 ms  »  → SYN → SYN-ACK → ACK
-  ▸ ✓  TLS         240 ms  »  → TLSv1.3 • TLS_AES_256_GCM_SHA384
-  ▸ ✓  HTTP        242 ms  »  → GET /health → 200
-
-╔════════════════════════════════════════════════╗
-║  ✨ All Systems Healthy ✨                    ║
-║  Total time: 544 ms                            ║
-╚════════════════════════════════════════════════╝
-```
-
-This output is intentionally compact and color-coded so you can scan for issues at a glance.
-
----
-
-## Why pulse?
-
-Pulse fills the gap between low-level tools and human-friendly insight.
-
-- Single command that replaces a pipeline of `dig`/`nc`/`openssl`/`curl` calls
-- Fast: completes within a few hundred milliseconds on typical networks
-- Zero runtime dependencies — pure Python stdlib
-- Machine-friendly JSON + meaningful exit codes for automation
-
----
-
-## Install
-
-Pick how you want to use it:
-
-- Quick (no install):
-
-```bash
-python pulse.py <target>
-```
-
-- Global install (recommended for convenience):
-
-```powershell
-pip install .
+# Standard HTTPS check (port 443)
 pulse api.github.com
-```
 
-- Development mode:
+# Custom port
+pulse example.com:8080
 
-```bash
-pip install -e .
-pip install -r requirements-dev.txt
-```
+# With protocol specification
+pulse https://api.github.com
 
----
-
-## Quick Start
-
-Basic check (defaults to HTTPS / port 443):
-
-```bash
-pulse api.github.com
-```
-
-Deep analysis (enable extra TLS checks):
-
-```bash
+# Deep analysis with extra TLS checks
 pulse api.example.com --deep
-```
 
-Get machine-readable output:
-
-```bash
+# Machine-readable JSON output
 pulse api.github.com --json
-```
 
-Adjust per-check timeout (seconds):
-
-```bash
+# Custom timeout (30 seconds)
 pulse api.example.com --timeout 30
 ```
 
 ---
 
-## Examples
+## 💡 Usage Examples
 
-### Fast (human) output
+### 🕶️ **Human-Friendly Output (Default)**
 
-See demo above — the human output shows each step with timing and a friendly status.
+<div align="center">
 
-### Deep analysis (detect slow TLS)
+*See the live demo above*
+
+</div>
+
+### 🔍 **Deep Analysis Mode**
 
 ```bash
-pulse api.example.com --deep
+$ pulse api.example.com --deep
 
 ┌──────────────────────────────────────────────────┐
 │ Results                                          │
 └──────────────────────────────────────────────────┘
 
+  ▸ ✓  DNS          15 ms  »  → 93.184.221.133
+  ▸ ✓  TCP          42 ms  »  → SYN → SYN-ACK → ACK
   ▸ ⚠️  TLS         287 ms  »  TLSv1.2 • ECDHE-RSA-AES256 (SLOW)
+  ▸ ✓  HTTP        124 ms  »  → GET / → 200
 
-⚡ Performance Issues Detected — advice provided below.
+⚡ Performance Issues Detected — TLS negotiation took longer than expected.
 ```
 
-### JSON output (for automation)
+### 🤖 **JSON Output for Automation**
 
 ```json
 {
+  "timestamp": "2026-02-07T12:34:56Z",
   "target": "api.github.com:443",
   "checks": [
-    {"name":"DNS","duration_ms":67.3,"status":"✓","details":"→ 140.82.121.6"},
-    {"name":"TCP","duration_ms":52.1,"status":"✓","details":"→ SYN → SYN-ACK → ACK"},
-    {"name":"TLS","duration_ms":252.4,"status":"✓","details":"→ TLSv1.3 • TLS_AES_256_GCM_SHA384"},
-    {"name":"HTTP","duration_ms":341.2,"status":"✓","details":"→ GET /health → 200"}
+    {
+      "name": "DNS",
+      "duration_ms": 67.3,
+      "status": "✓",
+      "details": "→ 140.82.121.6",
+      "success": true
+    },
+    {
+      "name": "TCP",
+      "duration_ms": 52.1,
+      "status": "✓",
+      "details": "→ SYN → SYN-ACK → ACK",
+      "success": true
+    },
+    {
+      "name": "TLS",
+      "duration_ms": 252.4,
+      "status": "✓",
+      "details": "→ TLSv1.3 • TLS_AES_256_GCM_SHA384",
+      "success": true
+    },
+    {
+      "name": "HTTP",
+      "duration_ms": 341.2,
+      "status": "✓",
+      "details": "→ GET /health → 200",
+      "success": true
+    }
   ],
-  "total_ms":712.0,
-  "healthy":true
+  "total_ms": 712.0,
+  "healthy": true,
+  "exit_code": 0
 }
 ```
 
+### 📊 **Advanced JSON Processing**
+
+```bash
+# Monitor and alert
+pulse api.example.com --json | jq '.healthy' | grep -q 'false' && echo "ALERT: Service down!"
+
+# Performance tracking
+pulse api.example.com --json | jq '.total_ms' > performance.log
+
+# CI/CD integration
+if ! pulse api.example.com --json --timeout 5 | jq -e '.healthy' >/dev/null; then
+    echo "Service check failed"
+    exit 1
+fi
+```
+
 ---
 
-## CLI Reference
+## ⚙️ CLI Reference Guide
+
+<div align="center">
+
+### Complete Command Line Interface
+
+</div>
 
 ```
-usage: pulse [-h] [--deep] [--json] [--timeout TIMEOUT] target
+pulse [-h] [--deep] [--json] [--timeout TIMEOUT] target
 
 positional arguments:
-  target               Host[:port] or URL to check (e.g. api.github.com)
+  target               Host[:port] or URL to check (e.g., api.github.com)
 
 optional arguments:
-  -h, --help           show this help message and exit
-  --deep               enable deep analysis (TLS anomaly detection)
-  --json               output JSON for scripting
-  --timeout TIMEOUT    timeout for individual checks in seconds (default: 10)
+  -h, --help           Show this help message and exit
+  --deep               Enable deep analysis (TLS anomaly detection)
+  --json               Output JSON for scripting
+  --timeout TIMEOUT    Timeout for individual checks in seconds (default: 10)
 ```
 
-Exit codes:
+<div align="center">
 
-- `0` — healthy (all checks passed)
-- `1` — degraded (warnings present)
-- `2` — failed (critical error)
+### Exit Code Meanings
+
+</div>
+
+| Code | Status | Description |
+|------|--------|-------------|
+| `0` | ✅ Healthy | All checks passed successfully |
+| `1` | ⚠️ Degraded | Warnings present, but functional |
+| `2` | ❌ Failed | Critical errors detected |
 
 ---
 
-## JSON & Automation
+## 🤖 Automation & Integration
 
-Pulse produces compact JSON suitable for pipelines and monitoring. Use the `--json` flag and parse fields such as `total_ms`, `healthy` and individual check durations.
+<div align="center">
 
-Example: send results to Prometheus Pushgateway (conceptual):
+### Seamless Integration with Your Infrastructure
+
+</div>
+
+#### 📈 **Monitoring Integration**
 
 ```python
-import json, subprocess
-res = subprocess.run(["pulse","api.github.com","--json"], capture_output=True, text=True)
-data = json.loads(res.stdout)
-print(data['total_ms'], data['healthy'])
+# Prometheus metrics export
+import json, subprocess, sys
+
+def get_pulse_metrics(target):
+    result = subprocess.run(
+        ["pulse", target, "--json"], 
+        capture_output=True, 
+        text=True
+    )
+    
+    if result.returncode == 0:
+        data = json.loads(result.stdout)
+        return {
+            'total_time': data['total_ms'],
+            'healthy': data['healthy'],
+            'checks': {check['name']: check['duration_ms'] for check in data['checks']}
+        }
+    return None
+
+# Usage
+metrics = get_pulse_metrics('api.github.com')
+if metrics:
+    print(f"Total time: {metrics['total_time']}ms")
+    print(f"Healthy: {metrics['healthy']}")
+```
+
+#### 🔄 **CI/CD Pipeline Integration**
+
+```yaml
+# GitHub Actions example
+name: Network Health Check
+on: [schedule, push]
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install pulse
+        run: pip install pulse-network-diagnostics
+      
+      - name: Check API health
+        run: |
+          pulse api.github.com --timeout 15
+          echo "Health check completed with exit code $?"
+```
+
+#### 📊 **Performance Monitoring**
+
+```bash
+#!/bin/bash
+# Continuous monitoring script
+
+while true; do
+    timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+    result=$(pulse api.example.com --json)
+    total_time=$(echo $result | jq '.total_ms')
+    healthy=$(echo $result | jq '.healthy')
+    
+    echo "$timestamp - $total_time ms - $healthy" >> health_monitor.log
+    
+    # Alert if performance degrades
+    if (( $(echo "$total_time > 1000" | bc -l) )); then
+        echo "⚠️ Performance degradation detected: $total_time ms"
+    fi
+    
+    sleep 300  # Check every 5 minutes
+done
 ```
 
 ---
 
-## Troubleshooting & Quick Fixes
+## 🛠️ Troubleshooting Guide
 
-If a check fails, pulse prints concise, actionable suggestions. Common cases:
+<div align="center">
 
-- DNS: try public DNS (`nslookup <host> 8.8.8.8`) or verify `/etc/resolv.conf`.
-- TCP: ensure service listens on port and firewall allows traffic.
-- TLS: check certificate chain and enable TLS1.3 / modern ciphers.
-- HTTP: verify application endpoint (maybe not `/health`).
+### Common Issues & Solutions
 
-If you need more detail, run the specific diagnostic commands suggested by the output (e.g. `openssl s_client -connect host:443`).
+</div>
+
+| Check | Common Issues | Quick Fixes |
+|-------|---------------|-------------|
+| **DNS** | Resolution failures | Try `nslookup <host> 8.8.8.8` or verify `/etc/resolv.conf` |
+| **TCP** | Connection timeouts | Check if service listens on port and firewall allows traffic |
+| **TLS** | Certificate errors | Verify certificate chain and enable modern cipher suites |
+| **HTTP** | Endpoint not found | Confirm application endpoint (not necessarily `/health`) |
+
+#### 🕵️ **Diagnostic Commands**
+
+```bash
+# When pulse reports DNS issues
+nslookup your-domain.com 8.8.8.8
+
+# For TCP connectivity problems
+telnet your-domain.com 443
+
+# For TLS certificate inspection
+openssl s_client -connect your-domain.com:443 -servername your-domain.com
+
+# For HTTP endpoint verification
+curl -I https://your-domain.com/
+```
 
 ---
 
-## Contributing
+## 👥 Contributing Guidelines
 
-Contributions welcome — see `CONTRIBUTING.md` for the workflow, testing and code style. Keep commits focused, include tests for new behavior and follow the conventional commit types: `feat`, `fix`, `docs`, `chore`, etc.
+<div align="center">
+
+### Join Our Community!
+
+</div>
+
+We welcome contributions of all kinds! Here's how to get started:
+
+#### 📋 **Contribution Process**
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feat/amazing-feature`)
+3. **Commit** changes using conventional commits (`feat: add amazing feature`)
+4. **Push** to the branch (`git push origin feat/amazing-feature`)
+5. **Open** a Pull Request
+
+#### 🎯 **Commit Types We Accept**
+
+- `feat`: New features
+- `fix`: Bug fixes
+- `docs`: Documentation updates
+- `test`: Test improvements
+- `refactor`: Code restructuring
+- `perf`: Performance improvements
+- `chore`: Maintenance tasks
+
+#### 🧪 **Development Setup**
+
+```bash
+# Clone the repository
+git clone https://github.com/vazor-code/pulse
+cd pulse
+
+# Set up development environment
+pip install -e .
+pip install -r requirements-dev.txt
+
+# Run tests
+pytest tests/
+
+# Format code
+black .
+isort .
+```
 
 ---
 
-## License
+## 📦 Release Information
 
-This project is released under the **GPL-3.0** license — see `LICENSE` for details.
+<div align="center">
+
+### Stay Updated
+
+</div>
+
+- **Latest Release**: v1.0.0
+- **Repository**: [github.com/VAZlabs/pulse](https://github.com/VAZlabs/pulse)
+
+#### 🔄 **Versioning Policy**
+
+We follow semantic versioning (SemVer). Breaking changes will be clearly documented in release notes.
+
+---
+
+## 📄 License
+
+<div align="center">
+
+### GPL-3.0 License
+
+</div>
+
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](https://github.com/VAZlabs/pulse/blob/main/LICENSE) file for complete details.
+
+<div align="center">
+
+---
+
+### 💝 Made with Love for Network Diagnostics
+
+**Star this repo** ⭐ if it helped you solve network issues faster!
+
+</div>
