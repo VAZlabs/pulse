@@ -1,0 +1,2 @@
+# pulse has no external dependencies - uses only Python standard library
+# This file is kept for consistency and future extensibility
