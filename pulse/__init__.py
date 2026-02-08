@@ -20,13 +20,6 @@ from pulse.core.result import BenchmarkResult
 from pulse.output.formatters import OutputFormatter
 from pulse.utils.logger import get_logger
 
-# Fix Windows encoding
-if sys.platform == "win32":
-    import io
-
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
-
 
 logger = get_logger(__name__)
 
