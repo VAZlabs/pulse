@@ -30,7 +30,7 @@ jobs:
     
     - name: Run unit tests
       run: |
-        python -m pytest test_pulse.py -v || python test_pulse.py
+        python -m pytest tests/ -v --tb=short
 
   lint:
     runs-on: ubuntu-latest
@@ -48,7 +48,7 @@ jobs:
         pip install pylint black mypy
     
     - name: Check formatting with black
-      run: black --check pulse.py || true
+      run: black --check pulse/ tests/ || true
     
     - name: Lint with pylint
-      run: pylint pulse.py --exit-zero || true
+      run: pylint pulse/ --exit-zero || true

@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pulse-network-diagnostics"
+version = "2.0.0"
+description = "Advanced async network diagnostics tool - Check DNS → TCP → TLS → HTTP chain"
+readme = "README.md"
+license = {text = "GPL-3.0"}
+authors = [
+    {name = "pulse-team", email = "pulse@example.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet",
+    "Topic :: System :: Networking",
+    "Topic :: System :: Systems Administration",
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.7.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "isort>=5.12.0",
+]
+yaml = ["PyYAML>=6.0"]
+dns = ["dnspython>=2.3.0"]
+
+[project.scripts]
+pulse = "pulse:main"
+
+[project.urls]
+Homepage = "https://github.com/vazor-code/pulse"
+Repository = "https://github.com/vazor-code/pulse"
+Issues = "https://github.com/vazor-code/pulse/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pulse*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+asyncio_mode = "auto"
