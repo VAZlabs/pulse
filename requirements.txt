@@ -1,2 +1,13 @@
-# pulse has no external dependencies - uses only Python standard library
-# This file is kept for consistency and future extensibility
+# Core dependencies - uses mostly Python standard library
+# Optional dependencies for enhanced functionality
+
+# For YAML output support
+# PyYAML>=6.0
+
+# For advanced DNS queries
+# dnspython>=2.3.0
+
+# For HTTP/2 support
+# h2>=4.1.0
+
+# Development dependencies (install with: pip install -r requirements-dev.txt)
