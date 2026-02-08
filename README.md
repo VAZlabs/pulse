@@ -122,6 +122,14 @@ pip install -e ".[dev]"
 pip install -r requirements-dev.txt
 ```
 
+#### 🐍 **From Source**
+
+```bash
+# Download and run directly
+wget https://raw.githubusercontent.com/vazor-code/pulse/main/pulse.py
+python pulse.py api.github.com
+```
+
 ---
 
 ## 📖 Usage
